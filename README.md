@@ -1,6 +1,10 @@
 # Python
 Introduction on Python Programming
 
+Desktop Application tkinter - not web page
+Web Application : flask
+
+
    _Variable assignment_ Here we create a variable called x and assign it the value of 0 using =, which is called the assignment operator
             
       x = 0

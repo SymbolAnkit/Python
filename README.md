@@ -24,3 +24,17 @@ Web Application : flask
     z = "Hello " * x
     print(z)  
                 
+Numbers and arithmetic in python
+* type() is the second built-in function we've seen (after print()), and it's another good one to remember. It's very useful to be able to ask Python "what kind of thing is this?"
+
+* A natural thing to want to do with numbers is perform arithmetic. We've seen the + operator for addition, and the * operator for multiplication (of a sort). Python also has us covered for the rest of the basic buttons on your calculator:
+
+      Operator	      Name	               Description
+      a + b	         Addition	            Sum of a and b
+      a - b	         Subtraction	         Difference of a and b
+      a * b	         Multiplication	      Product of a and b
+      a / b	         True division	      Quotient of a and b
+      a // b	      Floor division	      Quotient of a and b, removing fractional parts
+      a % b	         Modulus	            Integer remainder after division of a by b
+      a ** b	      Exponentiation	      a raised to the power of b
+      -a	            Negation	            The negative of a

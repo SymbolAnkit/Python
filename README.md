@@ -50,3 +50,61 @@ Builtin Functions for working with numbers
 * abs() returns absolute value of it argument 
 
       print(abs(85.245))
+
+The help() function is possibly the most important Python function you can learn. If you can remember how to use help(), you hold the key to understanding most other function
+
+             help(round)
+* help() displays two things:
+   - the header of that function round(number[, ndigits]). In this case, this tells us that round() takes an argument we can describe as number. Additionally, we can optionally      give a separate argument which could be described as ndigits.
+   - A brief English description of what the function does
+   
+Defining Functions
+ 
+            def least_difference(a, b, c):
+                diff1 = abs(a - b)
+                diff2 = abs(b - c)
+                diff3 = abs(a - c)
+                return min(diff1, diff2, diff3)   
+                
+ * This creates a function called least_difference, which takes three arguments, a, b, and c.
+
+ * Functions start with a header introduced by the def keyword. The indented block of code following the : is run when the function is called.
+
+ * return is another keyword uniquely associated with functions. When Python encounters a return statement, it exits the function immediately, and passes the value on the right hand side to the calling context.
+
+ * Without a return statement, least_difference is completely pointless
+ 
+ Default Arguments 
+ 
+            print(1,2,3)
+            
+            print(1,2,3, sep = "<")
+
+Functions Appiled to Functions
+
+Here's something that's powerful, though it can feel very abstract at first. You can supply functions as arguments to other functions. Some example may make this clearer
+
+            def mult_by_five(x):
+                return 5 * x
+
+            def call(fn, arg):
+                 """Call fn on arg"""
+                 return fn(arg)
+
+            def squared_call(fn, arg):
+                """Call fn on the result of calling fn on arg"""
+                return fn(fn(arg))
+
+            print(
+                 call(mult_by_five, 1),
+                 squared_call(mult_by_five, 1), 
+                 sep='\n', # '\n' is the newline character - it starts a new line
+                    )
+
+ 
+
+
+
+
+
+

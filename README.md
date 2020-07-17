@@ -101,10 +101,37 @@ Here's something that's powerful, though it can feel very abstract at first. You
                  sep='\n', # '\n' is the newline character - it starts a new line
                     )
 
+Booleans
+* Python has a type of variable called bool. It has two possible values: True and False
+ * Comparison Operators
  
+            Operation	            Description		
+
+            a == b	            a equal to b		
+            a != b	            a not equal to b
+            a < b	            a less than b		
+            a > b	            a greater than b
+            a <= b	            a less than or equal to b		
+            a >= b	            a greater than or equal to b
 
 
+                       3.0 == 3 
+                       # True
+                       
+                       '3' == 3
+                       #False
+                       
+* Remember to use == instead of = when making comparisons
+* Booleans are most useful when combined with conditional statements, using the keywords if, elif, and else
 
+            if x == 0:
+                print(x, "is zero")
+            elif x > 0:
+                print(x, "is positive")
+            elif x < 0:
+                print(x, "is negative")
+            else:
+                print(x, "is unlike anything I've ever seen...")
 
-
+                        
 

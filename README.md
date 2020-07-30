@@ -162,4 +162,108 @@ Booleans
             
             A list can contain a mix of different types of variables:
             my_favourite_things = [32, 'raindrops on roses', help]
+   
+   ## Indexing
+   * We can access individual list elements with square brackets.
+   * Elements at the end of the list can be accessed with negative numbers, starting from -1:
+   
+            list[0]
+            list[1]
+            list[-1]
             
+    ## Slicing
+    
+            planets[0:3]
+            planets[0:3] is our way of asking for the elements of planets starting from index 0 and continuing up to but not including index 3
+            
+            The starting and ending indices are both optional. If I leave out the start index, it's assumed to be 0. So I could rewrite the expression above as:
+            planets[:3]
+            
+            If I leave out the end index, it's assumed to be the length of the list.
+            planets[3:]
+            
+            We can also use negative indices when slicing:
+            
+            # All the planets except the first and last
+            planets[1:-1]
+            
+            # The last 3 planets
+            planets[-3:]
+### Changing lists
+* Lists are __"mutable"__, meaning they can be modified "in place".
+ - One way to modify a list is to assign to an index or slice expression.
+                      
+                      planets[3] = 'New assigned value'
+### List functions
+* Python has several useful functions for working with lists
+
+             How many planets are there?
+             len(planets)
+             output 8
+             
+             The planets sorted in alphabetical order
+             sorted(planets)
+             
+             sum - does what you might expect:
+             primes = [2, 3, 5, 7]
+             sum(primes)
+             17
+             
+             max(primes)
+             7
+    ### Interlude: objects
+    numbers in Python carry around an associated variable called imag representing their imaginary part
+    
+            x = 12
+            # x is a real number, so its imaginary part is 0.
+            print(x.imag)
+            0
+            
+            # Here's how to make a complex number, in case you've ever been curious:
+            c = 12 + 3j
+            print(c.imag)
+            3.0
+### List Methods
+
+            list.append -  modifies a list by adding an item to the end:
+            planets.append('Pluto')
+            
+            list.pop removes and returns the last element of a list:
+  * Searching lists
+  
+            Where does Earth fall in the order of planets? We can get its index using the list.index method
+            planets.index('Earth')
+            2
+            It comes third (i.e. at index 2 - 0 indexing!)
+ * We can use the in operator to determine whether a list contains a particular value:
+ 
+            # Is Earth a planet?
+            "Earth" in planets
+            TRUE
+            
+            # Is Calbefraques a planet?
+            "Calbefraques" in planets
+            FALSE
+   ### Tuples
+* Tuples are almost exactly the same as lists. They differ in just two ways
+1: The syntax for creating them uses parentheses instead of square brackets
+2: They cannot be modified (they are immutable).
+            
+            1.          t = (1, 2, 3)
+            2.          t[0] = 100 # Error
+* Tuples are often used for functions that have __multiple return values__
+- the as_integer_ratio() method of float objects returns a numerator and a denominator in the form of a tuple:
+
+            x = 0.125
+            x.as_integer_ratio()
+            (1,8)
+   
+   _These multiple return values can be individually assigned as follows
+   
+            numerator, denominator = x.as_integer_ratio()
+            print(numerator / denominator)
+            0.125
+            
+            
+
+                

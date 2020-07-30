@@ -142,4 +142,24 @@ Booleans
                     return -1
                 else:
                     return 0
+## Lists
+* Lists in Python represent ordered sequences of values. Here is an example of how to create them:
 
+            primes = [2, 3, 5, 7]
+            
+            We can put other types of things in lists:
+            planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+            
+            We can even make a list of lists:
+            hands = [
+                        ['J', 'Q', 'K'],
+                        ['2', '2', '2'],
+                        ['6', 'A', 'K'], # (Comma after the last element is optional)
+                     ]
+                     
+            #I could also have written this on one line, but it can get hard to read
+            hands = [['J', 'Q', 'K'], ['2', '2', '2'], ['6', 'A', 'K']]
+            
+            A list can contain a mix of different types of variables:
+            my_favourite_things = [32, 'raindrops on roses', help]
+            

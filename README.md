@@ -263,7 +263,60 @@ Booleans
             numerator, denominator = x.as_integer_ratio()
             print(numerator / denominator)
             0.125
+ ### Loops
+ * Loops are a way to repeatedly execute some code.
+ 
+            planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
             
+            for planet in planets:
+                print(planet, end=' ') # print all on same line
+* The for loop specifies
+            __the variable name to use (in this case, planet)_
+            __the set of values to loop over (in this case, planets)_
+* we use the word "in" to link them together.
+* The object to the right of the "in" can be any object that supports iteration. Basically, if it can be thought of as a group of things, you can probably loop over it. In addition to lists, we can iterate over the elements of a tuple
+            
+                        multiplicands = (2, 2, 2, 3, 3, 5)
+                        product = 1
+                        
+                        for mult in multiplicands:
+                            product = product * mult
+                         product
+                         # 360
+                         
+                         
+                         * You can even loop through each character in a string:
+                         
+                         s = 'steganograpHy is the practicE of conceaLing a file, message, image, or video within another fiLe, message, image, Or video.'
+                         msg = ''
+                         
+                         # print all the uppercase letters in s, one at a time
+                         for char in s:
+                             if char.isupper():
+                                 print(char, end='')
+                          
+                          # HELLO
+ * range() is a function that returns a sequence of numbers. It turns out to be very useful for writing loops.
+ 
+            if we want to repeat some action 5 times:
+            
+            for i in range(5):
+                 print("Doing important work. i =", i)
+             
+                    #   Doing important work. i = 0
+                        Doing important work. i = 1
+                        Doing important work. i = 2
+                        Doing important work. i = 3
+                        Doing important work. i = 4
+# While Loops
+* type of loop in Python is a while loop, which iterates until some condition is met
+
+            i = 0
+            while i < 10:
+                 print(i, end=' ')
+                 i += 1
+            # 0 1 2 3 4 5 6 7 8 9 
+            # The argument of the while loop is evaluated as a boolean statement, and the loop is executed until the statement evaluates to False
             
 
                 
